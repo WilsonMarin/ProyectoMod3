@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    stages{
+        stage ('Newman tese'){
+            steps{
+                sh '''
+                cd api/newman
+                newman run .\TestsDeApi.postman_collection.json -e .\Heroku.postman_environment.json
+                '''
+            }
+
+        }
+    }
+
+
+
+}
