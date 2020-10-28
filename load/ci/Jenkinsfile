@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage ('Newman tese'){
+        stage ('Newman test'){
             steps{
                 sh '''
                 cd api/newman
