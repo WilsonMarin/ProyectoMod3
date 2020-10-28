@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+    stages{
+        stage ('Newman test'){
+            steps{
+                sh '''
+                cd api/newman
+                node --version
+                
+                '''
+            }
+
+        }
+    }
+
+
+
+}
