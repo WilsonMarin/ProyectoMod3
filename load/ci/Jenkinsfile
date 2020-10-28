@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('Newman test'){
             steps{
-                sh '''
+                bat '''
                 cd api/newman
                 node --version
                 
