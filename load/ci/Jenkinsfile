@@ -4,9 +4,9 @@ pipeline{
         stage ('Newman test'){
             steps{
                 sh '''
+                cd api/newman
                 node --version
                 npm install -g newman
-                cd api/newman
                 newman run TestsDeApi.postman_collection.json -e Heroku.postman_environment.json
                 '''
             }
