@@ -8,14 +8,15 @@ pipeline{
                 newman run TestsDeApi.postman_collection.json -e Heroku.postman_environment.json
                 '''
             }
-            stage ('Jmeter test'){
+            
+        }
+        stage ('Jmeter test'){
             steps{
                 sh '''
                 cd load/jmeter
                 jmeter -n -t examen_jmeter.jmx
                 '''
             }
-
         }
     }
 
