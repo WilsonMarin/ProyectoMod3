@@ -1,15 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage ('Newman test'){
-            steps{
-                sh '''
-                cd api/newman
-                newman run TestsDeApi.postman_collection.json -e Heroku.postman_environment.json
-                '''
-            }
-            
-        }
         stage ('Jmeter test'){
             steps{
                 sh '''
